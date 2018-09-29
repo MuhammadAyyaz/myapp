@@ -1,0 +1,41 @@
+{% include "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css')}}" />
+
+
+</head>
+
+<form method="post" action="/todo/v1_v01/tasks/api">
+    {{form.task(id="task")}}
+    {{form.submit(id="submit")}}
+</form>
+<div id="incomplete">
+<form method="post" action="/todo/v1_v01/tasks/incomplete">
+    {{form.incomplete(id="incomplete")}}
+</form></div>
+<div id="complete">
+<form method="post" action="/todo/v1_v01/tasks/complete">
+    {{form.complete(id="complete")}}
+</form></div>
+<div id="findall">
+    <form method="get" action="/todo/v1_v01/tasks">
+
+    {{form.findall(id="findall")}}
+</form>
+</div>
+{% for i in out %}
+  <div id="taski">  {% for j,k in i.items() %}
+
+           {{j|title}}:&nbsp&nbsp&nbsp   {{k}}<hr />
+
+    {% endfor %}
+    </div>
+{% endfor %}
+</html>

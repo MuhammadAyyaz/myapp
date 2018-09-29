@@ -1,0 +1,35 @@
+{% include "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css')}}" />
+
+
+</head>
+<div id="form">
+<form method="post" action="/todo/v1_v01/user/register">
+   <p> {{form.f_name.label}}{{form.f_name(id="f_name")}}</p>
+    <p>{{form.l_name.label}}{{form.l_name(id="l_name")}}</p>
+    <p>{{form.password.label}}{{form.password(id="password")}}</p>
+    <p>{{form.dob.label}}{{form.dob(id="dob")}}</p>
+    {{form.sign_up(id="Sign_up")}}
+
+</form></div>
+<div id="login">
+    <form method="post" action="/todo/v1_v01/user/login">
+        {{form.name.label}}{{form.name(id="name")}}
+        {{form.pas.label}}{{form.pas(id="password")}}
+        {{form.sign_in(id="sign_in")}}
+    </form>
+</div>
+<div id="logout">
+    <form method="post" action="/todo/v1_v01/user/logout">
+        {{form.logout(id="logout")}}
+    </form>
+</div>
+</html>

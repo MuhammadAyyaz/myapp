@@ -1,0 +1,24 @@
+{% include "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css')}}" />
+</head>
+
+<a href="{{url_for('findone')}}">Back</a>
+
+
+{% for i in out %}
+<div id="taski">  {% for j,k in i.items() %}
+
+           {{j|title}}:&nbsp&nbsp&nbsp   {{k}}<hr />
+
+    {% endfor %}
+</div>
+{% endfor %}
+</html>

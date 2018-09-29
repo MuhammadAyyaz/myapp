@@ -1,0 +1,12 @@
+{% include "index.html" %}
+<form method="post" action="/todo/v1_v01/tasks/update">
+
+    <p>{{form.task.label}} {{form.task(id='old Title')}}</p>
+    <p>{{form.task2.label}} {{form.task2(id='new Title')}}</p>
+    <p>{{form.description2.label}} {{form.description2(id='New description')}}
+    </p>
+
+    {{form.submit}}
+</form>
+
+

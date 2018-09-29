@@ -1,0 +1,10 @@
+{% include "index.html" %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" />
+<div id="addition">
+<form method="post" action="/todo/v1_v01/tasks/add">
+
+    {{form.task.label}} {{form.task(id='Task')}}<br />
+    {{form.description.label}} {{form.description(id='description')}}
+    {{form.submit}}
+</form>
+</div>
