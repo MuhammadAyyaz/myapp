@@ -94,7 +94,7 @@ def findone():
     return render_template('findone.html',form=form,out=out)
 
 @app.route('/todo/v1_v01/tasks/incomplete', methods=['GET','POST'])
-def findcompleted():
+def incomplete():
     form = SearchForm(request.form)
     out = []
     if request.method == "POST":
