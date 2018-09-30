@@ -1,5 +1,5 @@
 {% include "index.html" %}
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,18 +13,18 @@
 </head>
 <div id="form">
 <form method="post" action="/todo/v1_v01/user/register">
-   <p> {{form.f_name.label}}{{form.f_name(id="f_name")}}</p>
-    <p>{{form.l_name.label}}{{form.l_name(id="l_name")}}</p>
-    <p>{{form.password.label}}{{form.password(id="password")}}</p>
-    <p>{{form.dob.label}}{{form.dob(id="dob")}}</p>
+   {{form.f_name.label}}<br />{{form.f_name(id="f_name")}}<br />
+    {{form.l_name.label}}<br />{{form.l_name(id="l_name")}}<br />
+    {{form.password.label}}<br />{{form.password(id="password")}}<br />
+    {{form.dob.label}}<br />{{form.dob(id="dob")}}<br />
     {{form.sign_up(id="Sign_up")}}
 
 </form></div>
 <div id="login">
     <form method="post" action="/todo/v1_v01/user/login">
-        {{form.name.label}}{{form.name(id="name")}}
-        {{form.pas.label}}{{form.pas(id="password")}}
-        {{form.sign_in(id="sign_in")}}
+        {{form.name.label}}<br />{{form.name(id="name")}}<br />
+        {{form.pas.label}}<br />{{form.pas(id="password")}}<br />
+        {{form.sign_in(id="sign_in")}}<br />
     </form>
 </div>
 <div id="logout">

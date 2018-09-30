@@ -1,6 +1,20 @@
 {% include "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My-App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='style.css')}}" />
+
+
+</head>
+<div id="delete">
 <form method="post" action="/todo/v1_v01/tasks/delete">
 
-    {{form.task.label}}{{form.task(id="delete")}}
+    {{form.task.label}}<br />{{form.task(id="delete")}}
     {{form.submit}}
-</form>
+</form></div>
+</html>

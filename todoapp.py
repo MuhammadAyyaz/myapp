@@ -64,6 +64,7 @@ def login():
         if mongo.db.student.find({"First_Name":request.form['name'],
                                 "Password":request.form["pas"]}):
             session['First_Name'] = request.form['name']
+        return redirect("/todo/v1_v01/tasks/add")
 
     return render_template("user.html",form=form)
 @app.route('/todo/v1_v01/user/logout', methods=['GET','POST'])
@@ -94,7 +95,7 @@ def findone():
     return render_template('findone.html',form=form,out=out)
 
 @app.route('/todo/v1_v01/tasks/incomplete', methods=['GET','POST'])
-def findcompleted():
+def incomplete():
     form = SearchForm(request.form)
     out = []
     if request.method == "POST":
@@ -181,4 +182,4 @@ def updation():
 
 if __name__ == '__main__':
     app.secret_key = 'this is my app'
-    app.run(debug=True,port=8080)
+    app.run(debug=True)

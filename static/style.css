@@ -1,3 +1,7 @@
+* {
+    padding:0px;
+    margin:0px;
+    }
 #taski{
     color:green;
     background-color: powderblue;
@@ -25,39 +29,66 @@ form #task{
 
     }
 form #submit{
-    margin-top:20px;
+     margin-top:10px;
      width:100px;
      color:blue;
      font-size:15px;
 
 
 }
+
 #form form{
     float:right;
     color:blue;
+    margin-right:50px;
+
+}
+#update form{
+    margin-left:20px;
+    color:blue
+
+}
+#delete form{
+    margin-left:20px;
+
+    }
+#update form #Newdescription{
+    width:300px;
+
+    }
+#heading h1{
+    margin-left:50px;
 }
 form #Task{
-    background-color:yellow;
+
     color:black:
     margin-left:40px;
     width:200px;
-#addition{
-    margin-left:200px;
-    margin-top:50px;
-    background-color:green;
+    }
+#addition form{
 
-}
-}
-form #description{
-    background-color:yellow;
-    color:black;
     margin-left:20px;
-    margin-top:20px;
-    padding-left:100px;
-}
-#logout {
+    margin-top:50px;
+    color:blue;
 
+}
+
+#addition #description{
+
+    width:300px;
+
+}
+#login form{
+    margin-left:20px;
+    color:blue;
     float:left;
+    }
+
+#logout form{
+    margin-left:20px;
+    float:left;
+    color:blue;
+
 }
 #incomplete{
     margin:10px;
