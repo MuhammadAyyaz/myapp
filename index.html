@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}ToDo-App{% endblock %}
+{% block navbar %}
+
+<div class="navbar navbar-inverse" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle"
+data-toggle="collapse" data-target=".navbar-collapse">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/">MyApp</a>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li><a href="/todo/v1_v01/user/register">Home</a></li>
+<li><a href="/todo/v1_v01/tasks/api">Tasks</a></li>
+    <li><a href="/todo/v1_v01/tasks/add">Add Task</a></li>
+    <li><a href="/todo/v1_v01/tasks/update">Edit Task</a></li>
+    <li><a href="/todo/v1_v01/tasks/delete">Delete Task</a></li>
+    <li><a href="/todo/v1_v01/user/login">Login</a></li>
+    <li><a href="/todo/v1_v01/user/logout">Logout</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<style> h1 {margin-left:20px; }</style>
+<p>
+<h1>Todo App</h1>
+</p>
+{% endblock %}
+
